@@ -92,6 +92,7 @@ var specialCharacters = [
   
   
   // Function to prompt user for password options
+  // Validates if true and injects the result into final array
   function getPasswordOptions() {
     finalArray = [];
     passwordLength = parseInt(prompt('Please give a number between 10 and 64 for the characters to be in your password'));
@@ -120,10 +121,16 @@ var specialCharacters = [
  
   
   
-  }
+  
   
   // Function to generate password with user input
   function generatePassword() {
+    var password = "";
+    for (var i = 0; i < passwordLength; i++) {
+      var randomCharacter = Math.floor(Math.random() * finalArray.length);
+      password = password + finalArray[randomCharacter];
+    } return password;
+  
   
   }
   
