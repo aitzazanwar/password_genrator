@@ -18,3 +18,6 @@ Once confirmed the password appears in the text area.
 
 The app is supposed to display a message when no character type is selected.
 
+## Sreenshot
+
+<img src = "Screenshot.PNG" width= "600px">
