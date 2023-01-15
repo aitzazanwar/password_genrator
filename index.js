@@ -1,4 +1,5 @@
-
+var passwordLength = 10;
+var finalArray = [];
 // Array of special characters to be included in password
 var specialCharacters = [
     '@',
@@ -92,12 +93,31 @@ var specialCharacters = [
   
   // Function to prompt user for password options
   function getPasswordOptions() {
+    finalArray = [];
+    passwordLength = parseInt(prompt('Please give a number between 10 and 64 for the characters to be in your password'));
+    if (isNaN(passwordLength) || passwordLength < 10 || passwordLength > 64) {
+      alert('Please select a number between 10 and 64, please try again!');
+      return false;
+    }
+    if (confirm('Select ok to include small letters')) {
+      finalArray = finalArray.concat(lowerCasedCharacters);
+    }
+    if (confirm('Select ok to include capital letters')) {
+      finalArray = finalArray.concat(upperCasedCharacters);
+    }
+    if (confirm('Select ok to include special characters')) {
+      finalArray = finalArray.concat(specialCharacters);
+    }
+    if (confirm('Select ok to include numbers')) {
+      finalArray = finalArray.concat(numericCharacters);
   
+    } 
+    return true;
+
   }
   
   // Function for getting a random element from an array
-  function getRandom(arr) {
-  
+ 
   
   
   }
