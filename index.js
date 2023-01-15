@@ -124,6 +124,7 @@ var specialCharacters = [
   
   
   // Function to generate password with user input
+  // runs through the array, sets the length and random selected characters from the global arrays
   function generatePassword() {
     var password = "";
     for (var i = 0; i < passwordLength; i++) {
@@ -139,10 +140,14 @@ var specialCharacters = [
   
   // Write password to the #password input
   function writePassword() {
-    var password = generatePassword();
-    var passwordText = document.querySelector('#password');
-  
-    passwordText.value = password;
+    var selection = getPasswordOptions();
+    if (selection) {
+      var selectedPassword = generatePassword();
+      var passwordText = document.querySelector('#password');
+
+      passwordText.value = selectedPassword;
+    }
+    
   }
   
   // Add event listener to generate button
