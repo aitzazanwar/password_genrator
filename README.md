@@ -6,7 +6,8 @@ HTML and CSS is added to display the page in a browser.
 
 ## Function
 
-javaScript code allows to get the user choice by prompts and generate the password accordingly.
+javaScript code allows to get the user choice by prompts.
+The function generates the password accordingly.
 
 ## Usage
 
